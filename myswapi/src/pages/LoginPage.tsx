@@ -1,6 +1,7 @@
 import { loginRequest, profileRequest } from "../api/auth";
 import { useAuthStore } from "../store/auth";
 import { Link, useNavigate } from "react-router-dom";
+import '../styles/pages/login.css';
 
 const LoginPage: React.FC = () => {
     
@@ -29,27 +30,42 @@ const LoginPage: React.FC = () => {
         <div className="flex h-[calc(100vh-150px)] items-center justify-center">
       <form
         onSubmit={handleLogin}
-        className="bg-zinc-800 max-w-md p-7 rounded-md"
+        className="container"
       >
-        <h1 className="my-5 font-bold text-5xl">Login</h1>
+        <h1 className="text-white text-center myLoginTittle">LOGIN</h1>
 
+        <div className="row pt-5 justify-content-center align-items-center container mb-5">
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           placeholder="user@mail.com"
-          className="bg-gray-900 px-4 py-2 rounded-md w-full my-2"
+          className="myLoginInput"
         />
 
         <label htmlFor="password">Password:</label>
         <input
           type="password"
           placeholder="********"
-          className="bg-gray-900 px-4 py-2 rounded-md w-full my-2"
+          className="myLoginInput"
         />
-        <button className="bg-indigo-500 px-4 py-2 w-full rounded-md">
-          Login
+        </div>
+        <div className="loginButtonContainer mb-5">
+        <div>
+          <button className="btn">
+        <strong>lOGIN</strong>
+          <div id="container-stars">
+            <div id="stars"></div>
+          </div>
+
+          <div id="glow">
+            <div className="circle"></div>
+            <div className="circle"></div>
+          </div>
         </button>
-        <p className="mt-7 text-slate-400 flex justify-between">
+        </div>
+       
+        </div>
+        <p className="text-center">
           Don't Have an Account?{" "}
           <Link to="/register" className="text-indigo-100 font-bold">
             Register

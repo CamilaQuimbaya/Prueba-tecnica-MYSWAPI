@@ -72,7 +72,7 @@ const MainComponent: React.FC = () => {
       <button className='myMainButton' onClick={handlePrevCharacterPage} disabled={currentCharacterPage === 1}>Previous Character Page</button>
       <button className='myMainButton' onClick={handleNextCharacterPage} disabled={currentCharacterPage === totalCharacterPages}>Next Character Page</button>
       </div>
-      <h2>Planets</h2>
+      <h2>......</h2>
       <PlanetList planets={planets} />
       <div className='mainButtonsCont'>
       <button className='myMainButton' onClick={handlePrevPlanetPage} disabled={currentPlanetPage === 1}>Previous Planet Page</button>

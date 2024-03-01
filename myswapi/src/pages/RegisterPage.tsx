@@ -31,35 +31,49 @@ const RegisterPage: React.FC = () => {
         <div className="flex h-[calc(100vh-150px)] items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="bg-zinc-800 max-w-md p-7 rounded-md"
+        className="container"
       >
-        <h1 className="my-5 font-bold text-5xl">Register</h1>
+        <h1 className="text-white text-center">Register</h1>
         {errors && <Errors errors={errors} />}
 
-        <label htmlFor="fullname">FullName:</label>
+        <div className="container">
+          <div className="row container mt-3 mb-5">
+          <label htmlFor="fullname">FullName:</label>
         <input
           type="text"
           placeholder="Ryan Ray"
-          className="bg-gray-900 px-4 py-2 rounded-md w-full my-2 focus:outline-none"
+          className="myLoginInput"
         />
 
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           placeholder="user@email.com"
-          className="bg-gray-900 px-4 py-2 appearance-none rounded-md w-full my-2 focus:outline"
+          className="myLoginInput"
         />
 
         <label htmlFor="password">Password:</label>
         <input
           type="password"
           placeholder="********"
-          className="bg-gray-900 px-4 py-2 rounded-md w-full my-2 focus:outline-none"
+          className="myLoginInput"
         />
-        <button className="bg-indigo-500 px-4 py-2 w-full rounded-md">
-          Login
-        </button>
-        <p className="mt-7 text-slate-400 flex justify-between">
+          </div>
+        </div>
+        <div className="loginButtonContainer mb-5">
+          <button className="btn">
+          <strong>SIGN UP</strong>
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+
+            <div id="glow">
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </button>
+        </div>
+        <p className="text-center text-white">
           Already Have an Account?{" "}
           <Link to="/login" className="text-indigo-100 font-bold">
             Login
