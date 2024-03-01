@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({title, hair_color, image}) => {
       <div className="myCardContainer">
         <div className="myCard">
         <h3>{title}</h3>
-        {hair_color === "blond" ? "👱‍♂️" : "👨"}
+        {hair_color === "blond" ? <h1 className="imBlond">I´M BLOND</h1> : <p>{hair_color}</p>}
         {image === undefined || image === "" ? <img src={img} alt="img" className="img-fluid otherImg"/> : <img src={image} alt={title} className="img-fluid" />}
         </div>
       </div>

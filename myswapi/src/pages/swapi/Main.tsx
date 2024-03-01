@@ -66,12 +66,16 @@ const MainComponent: React.FC = () => {
       <h1 className='swtittle'>STAR WARS</h1>
       <h2 className='text-center mb-5'>Characters</h2>
       <CharacterList characters={characters} />
+      <div className='mainButtonsCont'>
       <button className='myMainButton' onClick={handlePrevCharacterPage} disabled={currentCharacterPage === 1}>Previous Character Page</button>
       <button className='myMainButton' onClick={handleNextCharacterPage} disabled={currentCharacterPage === totalCharacterPages}>Next Character Page</button>
+      </div>
       <h2>Planets</h2>
       <PlanetList planets={planets} />
+      <div className='mainButtonsCont'>
       <button className='myMainButton' onClick={handlePrevPlanetPage} disabled={currentPlanetPage === 1}>Previous Planet Page</button>
       <button className='myMainButton' onClick={handleNextPlanetPage} disabled={currentPlanetPage === totalPlanetPages}>Next Planet Page</button>
+      </div>
     </div>
   );
 };
