@@ -57,7 +57,7 @@
 
 @media (min-width: 769px) {
     .landingtextDiv {
-        animation: scroll 200s linear forwards;
+        animation: scroll 300s linear forwards;
     }
 }
 

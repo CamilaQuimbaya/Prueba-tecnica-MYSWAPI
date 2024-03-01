@@ -4,7 +4,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharacterList from './CharacterList';
 import PlanetList from './PlanetList';
+import Loader from '../../components/Loader';
 import '../../styles/pages/swapi/main.css';
+
 
 const MainComponent: React.FC = () => {
   const [characters, setCharacters] = useState<any[]>([]);
@@ -54,7 +56,7 @@ const MainComponent: React.FC = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div><Loader /></div>;
   }
 
   if (error) {

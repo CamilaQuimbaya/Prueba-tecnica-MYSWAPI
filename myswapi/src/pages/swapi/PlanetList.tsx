@@ -1,5 +1,6 @@
 // PlanetList.tsx
 import React from 'react';
+import '../../styles/pages/swapi/planet.css';
 
 interface Planet {
   name: string;
@@ -17,12 +18,21 @@ const PlanetList: React.FC<PlanetListProps> = ({ planets }) => {
   }
 
   return (
-    <ul>
-      {planets.map((planet) => (
-        // Utilizar el id único del planeta como clave
-        <li key={planet.id}>{planet.name}</li>
-      ))}
-    </ul>
+    <div className='container'>
+      <h1 className='text-center'>Planetas</h1>
+      <div className='row gap-4 justify-content-center mt-5 mb-5'>
+        {planets.map((planet) => (
+          <div key={planet.id} className='col-4'>
+            <div className='card planetCard'>
+              <div className='card-body'>
+                <h5 className='card-title'>{planet.name}</h5>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
   );
 };
 
