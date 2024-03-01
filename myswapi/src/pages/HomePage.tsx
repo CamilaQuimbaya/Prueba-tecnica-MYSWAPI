@@ -1,12 +1,12 @@
 import React from "react";
 import MainComponent from "./swapi/Main";
+import "../styles/pages/home.css";
 
 
 const HomePage: React.FC = () => {
     return (
         <div>
-            <h1>Home Page</h1>
-            <p>Welcome to the Star Wars API</p>
+            <h1 className="homeTittle">Welcome</h1>
             <MainComponent />
 
         </div>

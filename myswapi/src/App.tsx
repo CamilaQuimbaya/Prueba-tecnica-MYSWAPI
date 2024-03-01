@@ -17,19 +17,17 @@ function App() {
     <div>
       <BrowserRouter>
 
-        <Navigation />
-
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/landing" element={<LandingPage />} />
-          
-          <Route element={<ProtectedRoute isAllowed={isAuth}/>}>
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-          </Route>
-
-        </Routes>
+            <Navigation />
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/landing" element={<LandingPage />} />
+              
+              <Route element={<ProtectedRoute isAllowed={isAuth}/>}>
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              </Route>
+            </Routes>
       </BrowserRouter>
     </div>
   );

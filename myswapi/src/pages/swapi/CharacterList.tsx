@@ -1,6 +1,7 @@
 // CharacterList.tsx
 import React from 'react';
 import Card from '../../components/uiSwapi/card';
+import charactersImg from '../../utils/characters';
 
 interface Character {
   name: string;
@@ -22,15 +23,18 @@ const CharacterList: React.FC<CharacterListProps> = ({ characters }) => {
 // ...
 
 return (
-    <div>
-        {characters.map((character) => (
-            // Utilizar el id único del personaje como clave
-            <Card key={character.id} title={character.name} hair_color={character.hair_color} />
-        ))}
+  <div>
+    {characters.map((character) => (
+      <Card key={character.id}
+       title={character.name} 
+       hair_color={character.hair_color}
+      image={charactersImg[character.name as keyof typeof charactersImg]}
+        />
+    ))}
 
-        <div>
-        </div>
+    <div>
     </div>
+  </div>
 );
 };
 
