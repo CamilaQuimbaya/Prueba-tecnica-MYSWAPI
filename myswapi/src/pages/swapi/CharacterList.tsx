@@ -23,17 +23,21 @@ const CharacterList: React.FC<CharacterListProps> = ({ characters }) => {
 // ...
 
 return (
-  <div>
+  <div className='container'>
+    <div className='row'>
     {characters.map((character) => (
-      <Card key={character.id}
+      <div className='col-6 mb-4 '>
+        <Card key={character.id}
        title={character.name} 
        hair_color={character.hair_color}
       image={charactersImg[character.name as keyof typeof charactersImg]}
         />
+      </div>
     ))}
 
     <div>
     </div>
+  </div>
   </div>
 );
 };

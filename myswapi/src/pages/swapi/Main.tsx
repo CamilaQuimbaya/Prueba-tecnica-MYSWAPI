@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharacterList from './CharacterList';
 import PlanetList from './PlanetList';
+import '../../styles/pages/swapi/main.css';
 
 const MainComponent: React.FC = () => {
   const [characters, setCharacters] = useState<any[]>([]);
@@ -62,15 +63,15 @@ const MainComponent: React.FC = () => {
 
   return (
     <div>
-      <h1>Star Wars Information</h1>
-      <h2>Characters</h2>
+      <h1 className='swtittle'>STAR WARS</h1>
+      <h2 className='text-center mb-5'>Characters</h2>
       <CharacterList characters={characters} />
-      <button onClick={handlePrevCharacterPage} disabled={currentCharacterPage === 1}>Previous Character Page</button>
-      <button onClick={handleNextCharacterPage} disabled={currentCharacterPage === totalCharacterPages}>Next Character Page</button>
+      <button className='myMainButton' onClick={handlePrevCharacterPage} disabled={currentCharacterPage === 1}>Previous Character Page</button>
+      <button className='myMainButton' onClick={handleNextCharacterPage} disabled={currentCharacterPage === totalCharacterPages}>Next Character Page</button>
       <h2>Planets</h2>
       <PlanetList planets={planets} />
-      <button onClick={handlePrevPlanetPage} disabled={currentPlanetPage === 1}>Previous Planet Page</button>
-      <button onClick={handleNextPlanetPage} disabled={currentPlanetPage === totalPlanetPages}>Next Planet Page</button>
+      <button className='myMainButton' onClick={handlePrevPlanetPage} disabled={currentPlanetPage === 1}>Previous Planet Page</button>
+      <button className='myMainButton' onClick={handleNextPlanetPage} disabled={currentPlanetPage === totalPlanetPages}>Next Planet Page</button>
     </div>
   );
 };
