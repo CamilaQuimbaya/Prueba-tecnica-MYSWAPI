@@ -9,7 +9,7 @@ interface Props {
 
 const ProtectedRoute = ({ isAllowed, children }: Props) => {
     if (!isAllowed) {
-        return <Navigate to="/login" />
+        return <Navigate to="/landing" />
     }
 
     return children ? <>{children}</> : <Outlet />;

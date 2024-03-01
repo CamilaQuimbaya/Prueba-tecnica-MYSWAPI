@@ -29,8 +29,6 @@ return (
         ))}
 
         <div>
-            <button className='myButton'>Previous</button>
-            <button>Next</button>
         </div>
     </div>
 );

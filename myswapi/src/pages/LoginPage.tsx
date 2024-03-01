@@ -20,7 +20,7 @@ const LoginPage: React.FC = () => {
         const resProfile = await profileRequest();
         setProfile(resProfile.data);
 
-        navigate("/Profile");
+        navigate("/home");
     };
 
 

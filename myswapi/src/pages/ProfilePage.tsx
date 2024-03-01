@@ -26,7 +26,7 @@ const ProfilePage: React.FC = () => {
                 className="inline-block rounded-md border border-transparent bg-indigo-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
                 onClick={() => {
                   logout();
-                  navigate("/login");
+                  navigate("/landing");
                 }}
               >
                 Logout
